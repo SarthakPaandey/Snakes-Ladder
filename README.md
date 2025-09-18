@@ -23,13 +23,15 @@ classDiagram
       -int size
       -Map~int, BoardEntity~ entitiesByStart
       -Map~String, Integer~ playerPositions
+      -Map~String, Player~ playersById
+      +registerPlayer(Player): void
       +addEntity(BoardEntity): void
       +getEntityAt(int): BoardEntity
       +getPosition(Player): int
       +setPosition(Player, int): void
       +applyEntities(int): int
       +isOccupied(int): boolean
-      +getPlayerAt(int): Player
+      +getPlayersAt(int): List~Player~
     }
 
     class Dice {
@@ -53,8 +55,20 @@ classDiagram
       +getName(): String
       +isBot(): boolean
     }
-    class HumanPlayer
-    class BotPlayer
+    class HumanPlayer {
+      -String id
+      -String name
+      +getId(): String
+      +getName(): String
+      +isBot(): boolean
+    }
+    class BotPlayer {
+      -String id
+      -String name
+      +getId(): String
+      +getName(): String
+      +isBot(): boolean
+    }
     Player <|.. HumanPlayer
     Player <|.. BotPlayer
 
@@ -64,8 +78,22 @@ classDiagram
       +getEnd(): int
       +apply(int): int
     }
-    class Snake
-    class Ladder
+    class Snake {
+      -int start
+      -int end
+      +Snake(int, int)
+      +getStart(): int
+      +getEnd(): int
+      +apply(int): int
+    }
+    class Ladder {
+      -int start
+      -int end
+      +Ladder(int, int)
+      +getStart(): int
+      +getEnd(): int
+      +apply(int): int
+    }
     BoardEntity <|.. Snake
     BoardEntity <|.. Ladder
 

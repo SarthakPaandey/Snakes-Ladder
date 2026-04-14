@@ -1,3 +1,35 @@
+# 🎲 Snake & Ladder — Low Level Design
+
+A Java implementation of the classic Snake & Ladder board game using Low Level Design (LLD) principles. It models the complete game with players, board entities (snakes and ladders), dice, and rule sets.
+
+## Overview
+
+This LLD exercise simulates a Snake & Ladder game with multiple players, configurable board entities, and flexible rule management. The design follows object-oriented principles with clear separation between game components.
+
+## Features
+
+- Multi-player support
+- Configurable board with snakes and ladders
+- Dice simulation
+- Rule-based game management
+- Player position tracking
+- Win condition detection
+
+## Tech Stack
+
+| Component | Technology |
+|-----------|------------|
+| Language  | Java       |
+| Build     | Maven (pom.xml) |
+| Pattern   | LLD, OOP |
+
+## Getting Started
+
+```bash
+mvn compile
+mvn exec:java
+```
+
 ## Snake & Ladder - Class Diagram
 
 ### Class Diagram (high level)
